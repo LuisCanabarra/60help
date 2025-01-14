@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,13 @@
         <li><a href="#suporte">Suporte Técnico</a></li>
         <li><a href="#emergencia">Emergência</a></li>
         <li><a href="#tutorial">Tutoriais</a></li>
-        <li><a href="#comunidade">Comunidade</a></li>
         <li><a href="#acessibilidade">Acessibilidade</a></li>
       </ul>
     </nav>
   </header>
+
   <main>
+    <!-- Tela de login -->
     <section id="login">
       <h2>Tela de Login</h2>
       <form id="login-form">
@@ -32,51 +33,25 @@
       <p id="login-message"></p>
     </section>
 
-    <section id="suporte">
-      <h2>Suporte Técnico</h2>
-      <p>Assistência em tempo real para problemas técnicos.</p>
-      <button id="chat-btn">Abrir Chat</button>
-      <div id="chat-box" class="hidden">
-        <p>Como posso ajudar?</p>
-        <textarea id="chat-input"></textarea>
-        <button id="send-chat">Enviar</button>
-      </div>
-    </section>
-
-    <section id="emergencia">
-      <h2>Emergência</h2>
-      <p>Pressione o botão abaixo para enviar um alerta.</p>
-      <button id="emergency-btn">Botão de Emergência</button>
-      <p id="emergency-status"></p>
-    </section>
-
-    <section id="tutorial">
-      <h2>Tutoriais e Guias</h2>
-      <div id="tutorial-list">
-        <!-- Conteúdo dinâmico será carregado aqui -->
-      </div>
-    </section>
-
-    <section id="comunidade">
-      <h2>Comunidade</h2>
-      <textarea id="forum-input" placeholder="Compartilhe sua dúvida..."></textarea>
-      <button id="post-forum">Publicar</button>
-      <div id="forum-messages">
-        <!-- Mensagens publicadas serão exibidas aqui -->
-      </div>
-    </section>
-
+    <!-- Acessibilidade -->
     <section id="acessibilidade">
       <h2>Acessibilidade</h2>
-      <button id="increase-font">Aumentar Fonte</button>
-      <button id="decrease-font">Diminuir Fonte</button>
-      <button id="high-contrast">Ativar Alto Contraste</button>
+      <div>
+        <button id="increase-font">Aumentar Fonte</button>
+        <button id="decrease-font">Diminuir Fonte</button>
+        <button id="high-contrast">Ativar Alto Contraste</button>
+        <button id="voice-command">Ativar Comando de Voz</button>
+      </div>
+      <p id="voice-status"></p>
     </section>
+
+    <!-- Outras seções... -->
   </main>
+
   <footer>
     <p>© 2025 Suporte para Idosos. Todos os direitos reservados.</p>
   </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
-
