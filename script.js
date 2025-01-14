@@ -1,49 +1,51 @@
-// Credenciais Simples
-const validUser = "idoso";
-const validPassword = "1234";
-
-// Elementos
-const loginScreen = document.getElementById("login-screen");
-const mainScreen = document.getElementById("main-screen");
-const loginForm = document.getElementById("login-form");
-const loginError = document.getElementById("login-error");
-
 // Login
-loginForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+const loginForm = document.getElementById('login-form');
+const loginMessage = document.getElementById('login-message');
 
-    if (username === validUser && password === validPassword) {
-        loginScreen.style.display = "none";
-        mainScreen.style.display = "block";
-    } else {
-        loginError.textContent = "Usuário ou senha incorretos!";
-    }
+loginForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const username = document.getElementById('username').value;
+  const password = document.getElementById('password').value;
+
+  if (username === 'idoso' && password === '1234') {
+    loginMessage.textContent = 'Login bem-sucedido!';
+    loginMessage.style.color = 'green';
+  } else {
+    loginMessage.textContent = 'Usuário ou senha incorretos.';
+    loginMessage.style.color = 'red';
+  }
 });
 
-// Suporte
-const btnSuporte = document.getElementById("btn-suporte");
-const formSuporte = document.getElementById("form-suporte");
-const enviarSuporte = document.getElementById("enviar-suporte");
+// Chat Suporte Técnico
+const chatBtn = document.getElementById('chat-btn');
+const chatBox = document.getElementById('chat-box');
+const chatInput = document.getElementById('chat-input');
 
-btnSuporte.addEventListener("click", () => {
-    formSuporte.style.display = formSuporte.style.display === "none" ? "block" : "none";
+chatBtn.addEventListener('click', () => {
+  chatBox.classList.toggle('hidden');
 });
 
-enviarSuporte.addEventListener("click", () => {
-    const problema = document.getElementById("descricao-problema").value;
-    if (problema) {
-        alert("Suporte solicitado com sucesso! Descrição do problema: " + problema);
-        formSuporte.style.display = "none";
-    } else {
-        alert("Por favor, descreva o problema antes de enviar.");
-    }
+// Botão de Emergência
+const emergencyBtn = document.getElementById('emergency-btn');
+const emergencyStatus = document.getElementById('emergency-status');
+
+emergencyBtn.addEventListener('click', () => {
+  emergencyStatus.textContent = 'Emergência acionada! Localização enviada.';
 });
 
-// Emergência
-const btnEmergencia = document.getElementById("btn-emergencia");
+// Acessibilidade
+const increaseFont = document.getElementById('increase-font');
+const decreaseFont = document.getElementById('decrease-font');
+const highContrast = document.getElementById('high-contrast');
 
-btnEmergencia.addEventListener("click", () => {
-    alert("Mensagem de emergência enviada para os contatos cadastrados!");
+increaseFont.addEventListener('click', () => {
+  document.body.style.fontSize = '1.2em';
+});
+
+decreaseFont.addEventListener('click', () => {
+  document.body.style.fontSize = '1em';
+});
+
+highContrast.addEventListener('click', () => {
+  document.body.classList.toggle('high-contrast');
 });
