@@ -1,247 +1,82 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz de Tecnologia 60+</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            text-align: center;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            width: 90%;
-            max-width: 500px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        #question {
-            font-size: 1.2em;
-            margin-bottom: 20px;
-        }
-
-        button {
-            background-color: #28a745;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-top: 20px;
-        }
-
-        button:hover {
-            background-color: #218838;
-        }
-
-        #options button {
-            display: block;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            margin: 10px auto;
-            width: 100%;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        #options button:hover {
-            background: #0056b3;
-        }
-
-        #result {
-            font-size: 1.2em;
-            margin-top: 20px;
-            color: #28a745;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suporte 24h para Idosos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Quiz de Tecnologia 60+</h1>
-        <div id="quiz-container">
-            <div id="question">Carregando...</div>
-            <div id="options"></div>
-        </div>
-        <button id="next-btn" onclick="nextQuestion()">Próxima</button>
-        <div id="result"></div>
-    </div>
-    <script>
-        const questions = [
-            {
-                question: "O que é Wi-Fi?",
-                options: [
-                    "Um tipo de computador",
-                    "Um sinal que conecta aparelhos à internet sem fio",
-                    "Um cabo para carregar celulares",
-                    "Uma marca de celulares"
-                ],
-                answer: 1,
-                explanation: "Wi-Fi é o sinal que conecta seus aparelhos à internet sem precisar de fio."
-            },
-            {
-                question: "O que é um app?",
-                options: [
-                    "Uma abreviação para 'aplicativo', como WhatsApp",
-                    "Um tipo de documento",
-                    "Um cabo de internet",
-                    "Um programa para televisão"
-                ],
-                answer: 0,
-                explanation: "App é uma abreviação para 'aplicativo', como WhatsApp ou jogos."
-            },
-            {
-                question: "O que significa 'nuvem' em tecnologia?",
-                options: [
-                    "Um tipo de computador avançado",
-                    "Um lugar virtual para guardar arquivos",
-                    "Um sinal de internet fraco",
-                    "Um serviço de envio de mensagens"
-                ],
-                answer: 1,
-                explanation: "A nuvem é uma prateleira virtual para guardar fotos, vídeos e documentos."
-            },
-            {
-                question: "O que é um download?",
-                options: [
-                    "Subir arquivos para a internet",
-                    "Baixar algo da internet para seu aparelho",
-                    "Enviar mensagens para amigos",
-                    "Atualizar um aplicativo"
-                ],
-                answer: 1,
-                explanation: "Download significa trazer algo da internet para o seu aparelho."
-            },
-            {
-                question: "O que é um link?",
-                options: [
-                    "Um botão do celular",
-                    "Um atalho que leva você a uma página da internet",
-                    "Um tipo de vírus",
-                    "Um arquivo de áudio"
-                ],
-                answer: 1,
-                explanation: "Um link é um atalho que leva você diretamente para uma página da internet."
-            },
-            {
-                question: "Para que serve uma senha?",
-                options: [
-                    "Proteger suas contas e informações",
-                    "Acessar arquivos grandes",
-                    "Conectar aparelhos ao Wi-Fi",
-                    "Baixar aplicativos"
-                ],
-                answer: 0,
-                explanation: "A senha protege suas contas e informações, como a chave da sua casa."
-            },
-            {
-                question: "O que é um navegador?",
-                options: [
-                    "Um programa para acessar a internet, como Google Chrome",
-                    "Um aplicativo para ler mensagens",
-                    "Uma rede social",
-                    "Um antivírus"
-                ],
-                answer: 0,
-                explanation: "O navegador é a porta de entrada para visitar sites na internet."
-            },
-            {
-                question: "O que significa SMS?",
-                options: [
-                    "Uma mensagem de texto simples enviada pelo celular",
-                    "Uma plataforma de vídeo",
-                    "Um tipo de e-mail",
-                    "Uma atualização de sistema"
-                ],
-                answer: 0,
-                explanation: "SMS é uma mensagem de texto simples enviada pelo celular."
-            },
-            {
-                question: "O que é spam?",
-                options: [
-                    "E-mails indesejados ou propagandas não solicitadas",
-                    "Um tipo de programa de computador",
-                    "Um link seguro",
-                    "Um aplicativo de mensagens"
-                ],
-                answer: 0,
-                explanation: "Spam são e-mails indesejados ou propagandas que chegam na sua caixa de entrada."
-            },
-            {
-                question: "O que é backup?",
-                options: [
-                    "Guardar uma cópia de segurança de arquivos importantes",
-                    "Deletar arquivos antigos",
-                    "Enviar mensagens para amigos",
-                    "Atualizar o celular"
-                ],
-                answer: 0,
-                explanation: "Backup é uma cópia de segurança de informações importantes."
-            }
-        ];
+  <header>
+    <h1>Suporte 24h para Idosos</h1>
+    <nav>
+      <ul>
+        <li><a href="#suporte">Suporte Técnico</a></li>
+        <li><a href="#emergencia">Emergência</a></li>
+        <li><a href="#tutorial">Tutoriais</a></li>
+        <li><a href="#comunidade">Comunidade</a></li>
+        <li><a href="#acessibilidade">Acessibilidade</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="login">
+      <h2>Tela de Login</h2>
+      <form id="login-form">
+        <label for="username">Usuário:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Senha:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="login-message"></p>
+    </section>
 
-        let currentQuestion = 0;
-        let score = 0;
+    <section id="suporte">
+      <h2>Suporte Técnico</h2>
+      <p>Assistência em tempo real para problemas técnicos.</p>
+      <button id="chat-btn">Abrir Chat</button>
+      <div id="chat-box" class="hidden">
+        <p>Como posso ajudar?</p>
+        <textarea id="chat-input"></textarea>
+        <button id="send-chat">Enviar</button>
+      </div>
+    </section>
 
-        function showQuestion() {
-            const questionElement = document.getElementById("question");
-            const optionsElement = document.getElementById("options");
+    <section id="emergencia">
+      <h2>Emergência</h2>
+      <p>Pressione o botão abaixo para enviar um alerta.</p>
+      <button id="emergency-btn">Botão de Emergência</button>
+      <p id="emergency-status"></p>
+    </section>
 
-            questionElement.textContent = questions[currentQuestion].question;
-            optionsElement.innerHTML = "";
+    <section id="tutorial">
+      <h2>Tutoriais e Guias</h2>
+      <div id="tutorial-list">
+        <!-- Conteúdo dinâmico será carregado aqui -->
+      </div>
+    </section>
 
-            questions[currentQuestion].options.forEach((option, index) => {
-                const button = document.createElement("button");
-                button.textContent = option;
-                button.onclick = () => checkAnswer(index);
-                optionsElement.appendChild(button);
-            });
-        }
+    <section id="comunidade">
+      <h2>Comunidade</h2>
+      <textarea id="forum-input" placeholder="Compartilhe sua dúvida..."></textarea>
+      <button id="post-forum">Publicar</button>
+      <div id="forum-messages">
+        <!-- Mensagens publicadas serão exibidas aqui -->
+      </div>
+    </section>
 
-        function checkAnswer(selected) {
-            const resultElement = document.getElementById("result");
-            if (selected === questions[currentQuestion].answer) {
-                score++;
-                resultElement.textContent = "Correto! " + questions[currentQuestion].explanation;
-            } else {
-                resultElement.textContent = "Errado! " + questions[currentQuestion].explanation;
-            }
-            document.getElementById("next-btn").style.display = "block";
-        }
-
-        function nextQuestion() {
-            currentQuestion++;
-            document.getElementById("result").textContent = "";
-            document.getElementById("next-btn").style.display = "none";
-
-            if (currentQuestion < questions.length) {
-                showQuestion();
-            } else {
-                document.getElementById("quiz-container").innerHTML = `<h2>Parabéns! Você terminou o quiz.</h2><p>Sua pontuação: ${score}/${questions.length}</p>`;
-            }
-        }
-
-        document.getElementById("next-btn").style.display = "none";
-        showQuestion();
-    </script>
+    <section id="acessibilidade">
+      <h2>Acessibilidade</h2>
+      <button id="increase-font">Aumentar Fonte</button>
+      <button id="decrease-font">Diminuir Fonte</button>
+      <button id="high-contrast">Ativar Alto Contraste</button>
+    </section>
+  </main>
+  <footer>
+    <p>© 2025 Suporte para Idosos. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
-
 
